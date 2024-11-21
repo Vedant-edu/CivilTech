@@ -29,8 +29,8 @@ export default function Contact() {
         >
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-800">Contact Us</h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 pl-8">
-            <div className="space-y-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12  ">
+            <div className="space-y-8 lg:pl-0 pl-8">
               <div className="flex items-start space-x-4">
                 <Phone className="w-6 h-6 text-gray-600" />
                 <div>
@@ -70,7 +70,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-6 bg-blue-100 rounded-[80px] p-12">
+            <form onSubmit={handleSubmit} className="lg:space-y-6 space-y-0 bg-blue-100 lg:rounded-[80px] rounded-[30px] p-12">
               {isMessageSent ? (
                 <div className="text-center text-gray-800">
                   <p>Message sent! We will get back to you.</p>

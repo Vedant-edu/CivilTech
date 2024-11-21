@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 export default function About() {
   return (
     
-    <div className="py-20 bg-blue-100 rounded-[80px]">
+    <div className="py-20 bg-blue-100 lg:rounded-[80px] rounded-[30px]">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -22,21 +22,21 @@ export default function About() {
             className="flex flex-col gap-10 xl:gap-14 lg:flex-row lg:justify-between">
             <div className="w-full lg:w-1/3 bg-blue-200 p-5 rounded-2xl">
               <div
-                className="font-manrope font-bold text-5xl bg-gradient-to-r from-cyan-700 to-emerald-800 bg-clip-text text-transparent mb-6 text-center ">
+                className="  font-bold text-5xl bg-gradient-to-r from-cyan-700 to-emerald-800 bg-clip-text text-transparent mb-6 text-center ">
                 13M+
               </div>
               <p className="text-lg  leading-7 text-center">Global orders Completed</p>
             </div>
             <div className="w-full lg:w-1/3 bg-blue-200 p-5 rounded-2xl">
               <div
-                className="font-manrope font-bold text-5xl bg-gradient-to-r from-cyan-700 to-emerald-800 bg-clip-text text-transparent mb-6 text-center ">
+                className="  font-bold text-5xl bg-gradient-to-r from-cyan-700 to-emerald-800 bg-clip-text text-transparent mb-6 text-center ">
                 50M+
               </div>
               <p className="text-lg  leading-7 text-center">Is the number of our beloved Customers</p>
             </div>
             <div className="w-full lg:w-1/3 bg-blue-200 p-5 rounded-2xl">
               <div
-                className="font-manrope font-bold text-5xl bg-gradient-to-r from-cyan-700 to-emerald-800 bg-clip-text text-transparent mb-6 text-center ">
+                className="  font-bold text-5xl bg-gradient-to-r from-cyan-700 to-emerald-800 bg-clip-text text-transparent mb-6 text-center ">
                 15+
               </div>
               <p className="text-lg  leading-7 text-center">Our inventry with different type of cover blocks</p>

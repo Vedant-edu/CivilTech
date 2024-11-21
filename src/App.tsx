@@ -10,6 +10,11 @@ function App() {
   useEffect(() => {
     // Smooth scroll behavior
     document.documentElement.style.scrollBehavior = 'smooth';
+    // Add Google Roboto font
+    const robotoFont = document.createElement('link');
+    robotoFont.href = 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap';
+    robotoFont.rel = 'stylesheet';
+    document.head.appendChild(robotoFont);
   }, []);
 
   return (

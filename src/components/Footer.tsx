@@ -1,6 +1,17 @@
+
 import { Facebook, Twitter, Instagram, Linkedin, Building2 } from 'lucide-react';
 
-export default function Footer() {
+const Footer = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <footer className="bg-blue-100 text-white pt-20 pb-10 lg:rounded-t-[80px] rounded-t-[30px]">
       <div className="container mx-auto px-4">
@@ -32,10 +43,38 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-6 text-black hover:text-[#2B6CB0] transition-colors">Quick Links</h3>
             <ul className="space-y-4">
-              <li><a href="#" className="text-black hover:text-[#2B6CB0] transition-colors">Home</a></li>
-              <li><a href="#" className="text-black hover:text-[#2B6CB0] transition-colors">About Us</a></li>
-              <li><a href="#" className="text-black hover:text-[#2B6CB0] transition-colors">Products</a></li>
-              <li><a href="#" className="text-black hover:text-[#2B6CB0] transition-colors">Contact</a></li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('home')}
+                  className="text-black hover:text-[#2B6CB0] transition-colors cursor-pointer"
+                >
+                  Home
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('about')}
+                  className="text-black hover:text-[#2B6CB0] transition-colors cursor-pointer"
+                >
+                  About Us
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('products')}
+                  className="text-black hover:text-[#2B6CB0] transition-colors cursor-pointer"
+                >
+                  Products
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('contact')}
+                  className="text-black hover:text-[#2B6CB0] transition-colors cursor-pointer"
+                >
+                  Contact
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -52,7 +91,9 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-6 text-black hover:text-[#2B6CB0] transition-colors">Contact Info</h3>
             <ul className="space-y-4 text-black">
-              Plot No: 3, <br /> Vishwakarma Industrial Estate, <br /> Kudsad Road, <br />
+              Plot No: 3, <br /> 
+              Vishwakarma Industrial Estate, <br /> 
+              Kudsad Road, <br />
               Kim, Surat, Gujarat. <br />
               Pincode: 394111
             </ul>
@@ -65,4 +106,6 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

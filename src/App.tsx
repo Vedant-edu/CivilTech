@@ -18,7 +18,7 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-white">
+    <div id='home' className="bg-white">
       <Navbar/>
       <Hero />
       <About />

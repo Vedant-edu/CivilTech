@@ -6,10 +6,9 @@ interface ProductCardProps {
   title: string;
   description: string;
   images: string[];
-  specifications: string[];
 }
 
-export default function ProductCard({ title, description, images, specifications }: ProductCardProps) {
+export default function ProductCard({ title, description, images }: ProductCardProps) {
   const [currentImage, setCurrentImage] = useState(0);
 
   const nextImage = () => {
@@ -50,11 +49,6 @@ export default function ProductCard({ title, description, images, specifications
       <div className="p-6">
         <h3 className="text-xl font-bold mb-2">{title}</h3>
         <p className="text-gray-600 mb-4">{description}</p>
-        <div className="space-y-2">
-          {specifications.map((spec, index) => (
-            <p key={index} className="text-sm text-gray-500">• {spec}</p>
-          ))}
-        </div>
       </div>
     </motion.div>
   );

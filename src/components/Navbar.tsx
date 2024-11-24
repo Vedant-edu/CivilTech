@@ -1,23 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const Navbar = () => {
   const [navIsOpened, setNavIsOpened] = useState(false);
-  const [navHeight, setNavHeight] = useState(20);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 1024) {
-        setNavHeight(100);
-      } else {
-        setNavHeight(20);
-      }
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
 
   const closeNavbar = () => {
     setNavIsOpened(false);
@@ -45,7 +29,7 @@ const Navbar = () => {
         onClick={closeNavbar} 
         className={`fixed bg-gray-800/40 inset-0 z-30 ${navIsOpened ? "lg:hidden" : "hidden lg:hidden"}`} 
       />
-      <header className={`sticky top-0 w-full flex items-center h-${navHeight} border-b border-b-gray-100 z-40 bg-white/80 backdrop-filter backdrop-blur-xl`}>
+      <header className="sticky top-0 w-full flex items-center h-20 border-b border-b-gray-100 z-40 bg-white/80 backdrop-filter backdrop-blur-xl">
         <nav className="relative mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 flex gap-x-5 justify-between items-center">
           <div className="flex items-center min-w-max">
             <button 
